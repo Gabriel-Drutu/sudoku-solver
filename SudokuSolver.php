@@ -546,8 +546,21 @@ class SudokuSolver
                 width: 40px;
                 text-align: center;
             }
+            
+            @media screen and (max-width: 440px){
+                .sudoku-field > input {
+                     height: 25px;
+                     width: 25px;
+                 }
+                 
+                 .sudoku-fields-container {
+                     width: 260px;
+                 }
+                 
+            }
         </style>
             <div class="input-sudoku-container col-md-6">
+                <p class="explaining text-center">Enter your unsolved sudoku here</p>
                 <div class="sudoku-fields-container">
                     <form method="get">
                     <?php                    
@@ -574,6 +587,7 @@ class SudokuSolver
             </div>
         </div>
         <div class="solved-sudoku-container col-md-6">
+            <p class="explaining text-center">See it solved here</p>   
             <div class="sudoku-fields-container">
             <?php
                 if(!$this->isWrong):
